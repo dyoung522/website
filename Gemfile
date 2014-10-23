@@ -29,6 +29,8 @@ gem 'unicorn'
 group :development do
   gem 'spring'
   gem 'spring-commands-rspec'
+  gem 'pry-rails'
+  gem 'foreman'
 end
 
 group :development, :test do
@@ -36,9 +38,7 @@ group :development, :test do
   gem 'byebug'
   gem 'dotenv-rails'
   gem 'factory_girl_rails'
-  gem 'pry-rails'
   gem 'rspec-rails', '~> 3.0.0'
-  gem 'foreman'
 end
 
 group :test do

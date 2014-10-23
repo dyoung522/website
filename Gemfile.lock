@@ -86,7 +86,7 @@ GEM
       factory_girl (~> 4.5.0)
       railties (>= 3.0.0)
     flutie (2.0.0)
-    font-awesome-sass (4.2.1)
+    font-awesome-sass (4.2.2)
       sass (~> 3.2)
     foreman (0.63.0)
       dotenv (>= 0.7)
