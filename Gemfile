@@ -22,7 +22,7 @@ gem 'recipient_interceptor'
 gem 'haml', '~> 4.0.0'
 gem 'sass-rails', '~> 4.0.3'
 gem 'simple_form'
-# gem 'title'
+gem 'bcrypt-ruby'
 gem 'uglifier'
 gem 'unicorn'
 
