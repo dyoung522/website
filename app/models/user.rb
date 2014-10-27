@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
   end
 
   def lastname
-    name.split[-1]
+    name.split.count > 1 ? name.split[-1] : ''
   end
 
   def middlename
