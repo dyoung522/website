@@ -10,6 +10,10 @@ RSpec.describe User, :type => :model do
       expect(@user).to respond_to(:authenticate)
     end
 
+    it 'is not an admin' do
+      expect(@user.admin).not_to be_truthy
+    end
+
     it 'has a #firstname' do
       expect(@user.firstname).to eq 'George'
     end
@@ -18,7 +22,7 @@ RSpec.describe User, :type => :model do
       expect(@user.lastname).to eq 'Martin'
     end
 
-    describe 'with a middle name' do
+    context 'with a middle name' do
       it 'has a valid #middlename' do
         expect(@user.middlename).to eq 'R. R.'
         @user.name = 'Test My User'
@@ -26,11 +30,12 @@ RSpec.describe User, :type => :model do
       end
     end
 
-    describe 'without a middle name' do
+    context 'without a middle name' do
       it 'has an empty #middlename' do
         @user.name = 'Test User'
         expect(@user.middlename).to be_empty
       end
     end
+
   end
 end

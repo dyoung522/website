@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
-  resources :sessions
   resources :users
 
-  get 'log_in' => 'sessions#new'
-  get 'log_out' => 'sessions#destroy'
+  get 'admin/log_in',  to: 'sessions#new'
+  get 'admin/log_out', to: 'sessions#destroy'
 
   root 'home#index'
 end
