@@ -7,4 +7,4 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 # Create a Guest User as UID 1
-User.create(name: 'Guest', email: 'nobody@example.com', password: ActiveSupport::SecureRandom.base64(25))
+User.create(name: 'Guest', email: 'nobody@example.com', password: SecureRandom.base64(25))
