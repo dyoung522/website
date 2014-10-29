@@ -17,7 +17,7 @@ gem 'neat', '~> 1.5.1'
 gem 'normalize-rails', '~> 3.0.0'
 gem 'pg'
 gem 'rack-timeout'
-gem 'rails', '4.1.6'
+gem 'rails', '~> 4.2.0'
 gem 'recipient_interceptor'
 gem 'haml', '~> 4.0.0'
 gem 'sass-rails', '~> 4.0.3'
@@ -31,6 +31,8 @@ group :development do
   gem 'spring-commands-rspec'
   gem 'pry-rails'
   gem 'foreman'
+  gem 'better_errors'
+  gem 'web-console', '~> 2.0'
 end
 
 group :development, :test do

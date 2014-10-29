@@ -1,2 +1,6 @@
-%h1 Home
-%p Find me in app/views/home/index.haml
+%h1= @home ? @home.title : 'Please create a Home Project'
+
+- if @projects
+  - @projects.each do |project|
+    = project.title
+

@@ -1,10 +1,12 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+# Create a Guest User and Admin User
+[
+    { name: 'Guest', email: 'nobody@example.com', password: SecureRandom.base64(25), admin: false },
+    { name: 'Admin', email: 'admin@example.com',  password: 'PleaseChangeMe',        admin: true  }
+].each do |record|
+  next if User.where(email: record[:email]).first
+  User.create(name: record[:name], email: record[:email], password: record[:password], admin: record[:admin])
+end
 
-# Create a Guest User as UID 1
-User.create(name: 'Guest', email: 'nobody@example.com', password: SecureRandom.base64(25))
+# Make sure we have a Home project
+Project.create(title: 'Home', summary: 'Welcome to My World', detail: nil, url: nil) unless Project.where(title: 'Home').first
+

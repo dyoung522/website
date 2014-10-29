@@ -1,4 +1,5 @@
-require "webmock/rspec"
+require 'webmock/rspec'
+require 'support/session_helper'
 
 # http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
@@ -11,6 +12,12 @@ RSpec.configure do |config|
   end
 
   config.order = :random
+
+  config.include SessionHelper, :type => :controller
 end
 
 WebMock.disable_net_connect!(allow_localhost: true)
+
+def log_in_as_admin
+  controller.session[:user_id] = create(:user, admin: true).id
+end
