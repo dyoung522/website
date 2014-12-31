@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.1.3'
+ruby '2.2.0'
 
 gem 'airbrake'
 gem 'bourbon', '~> 3.2.1'
@@ -40,7 +40,7 @@ group :development, :test do
   gem 'byebug'
   gem 'dotenv-rails'
   gem 'factory_girl_rails'
-  gem 'rspec-rails', '~> 3.0.0'
+  gem 'rspec-rails', '~> 3.1.0'
   gem 'guard-rails'
   gem 'guard-rspec'
   gem 'terminal-notifier-guard'
